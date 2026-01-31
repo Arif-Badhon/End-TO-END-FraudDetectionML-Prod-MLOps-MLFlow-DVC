@@ -1,0 +1,99 @@
+Backend store URI not provided. Using sqlite:///mlflow.db
+Registry store URI not provided. Using backend store URI.
+2026/01/31 21:26:26 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.schemas
+2026/01/31 21:26:26 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.tables
+2026/01/31 21:26:26 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.types
+2026/01/31 21:26:26 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.constraints
+2026/01/31 21:26:26 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.defaults
+2026/01/31 21:26:26 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.comments
+2026/01/31 21:26:26 INFO alembic.runtime.migration: Context impl SQLiteImpl.
+2026/01/31 21:26:26 INFO alembic.runtime.migration: Will assume non-transactional DDL.
+[MLflow] Security middleware enabled with default settings (localhost-only). To allow connections from other hosts, use --host 0.0.0.0 and configure --allowed-hosts and --cors-allowed-origins.
+INFO:     Uvicorn running on http://127.0.0.1:5001 (Press CTRL+C to quit)
+INFO:     Started parent process [84598]
+2026/01/31 21:26:28 INFO mlflow.server.jobs.utils: Starting huey consumer for job function invoke_scorer
+2026/01/31 21:26:28 INFO mlflow.server.jobs.utils: Starting huey consumer for job function run_online_session_scorer
+2026/01/31 21:26:28 INFO mlflow.server.jobs.utils: Starting huey consumer for job function run_online_trace_scorer
+2026/01/31 21:26:28 INFO mlflow.server.jobs.utils: Starting dedicated Huey consumer for periodic tasks
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.schemas
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.tables
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.types
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.constraints
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.defaults
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.comments
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.schemas
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.tables
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.types
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.constraints
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.defaults
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.comments
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.schemas
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.tables
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.types
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.constraints
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.defaults
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.comments
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.schemas
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.tables
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.types
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.constraints
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.defaults
+2026/01/31 21:26:28 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.comments
+INFO:     Started server process [84602]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [84603]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [84601]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [84604]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026/01/31 21:26:29 INFO mlflow.server.jobs.utils: Registered online_scoring_scheduler periodic task (runs every 1 minute)
+[2026-01-31 21:26:29,362] INFO:huey.consumer:MainThread:Huey consumer started with 5 thread, PID 84625 at 2026-01-31 15:26:29.362715
+[2026-01-31 21:26:29,362] INFO:huey.consumer:MainThread:Scheduler runs every 1 second(s).
+[2026-01-31 21:26:29,362] INFO:huey.consumer:MainThread:Periodic tasks are enabled.
+[2026-01-31 21:26:29,362] INFO:huey.consumer:MainThread:The following commands are available:
++ mlflow.server.jobs.utils._exec_job
++ mlflow.server.jobs.utils.online_scoring_scheduler
+[2026-01-31 21:26:29,365] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: d554e4eb-1911-4d80-8c1a-6d05b05a8717.
+[2026-01-31 21:26:29,368] INFO:huey:Worker-3:Executing mlflow.server.jobs.utils.online_scoring_scheduler: d554e4eb-1911-4d80-8c1a-6d05b05a8717
+[2026-01-31 21:26:29,381] INFO:huey.consumer:MainThread:Huey consumer started with 5 thread, PID 84623 at 2026-01-31 15:26:29.380978
+[2026-01-31 21:26:29,381] INFO:huey.consumer:MainThread:Scheduler runs every 1 second(s).
+[2026-01-31 21:26:29,381] INFO:huey.consumer:MainThread:Periodic tasks are enabled.
+[2026-01-31 21:26:29,381] INFO:huey.consumer:MainThread:The following commands are available:
++ mlflow.server.jobs.utils._exec_job
+[2026-01-31 21:26:29,389] INFO:huey.consumer:MainThread:Huey consumer started with 10 thread, PID 84622 at 2026-01-31 15:26:29.389741
+[2026-01-31 21:26:29,389] INFO:huey.consumer:MainThread:Scheduler runs every 1 second(s).
+[2026-01-31 21:26:29,389] INFO:huey.consumer:MainThread:Periodic tasks are enabled.
+[2026-01-31 21:26:29,389] INFO:huey.consumer:MainThread:The following commands are available:
++ mlflow.server.jobs.utils._exec_job
+[2026-01-31 21:26:29,394] INFO:huey.consumer:MainThread:Huey consumer started with 5 thread, PID 84624 at 2026-01-31 15:26:29.394619
+[2026-01-31 21:26:29,394] INFO:huey.consumer:MainThread:Scheduler runs every 1 second(s).
+[2026-01-31 21:26:29,394] INFO:huey.consumer:MainThread:Periodic tasks are enabled.
+[2026-01-31 21:26:29,394] INFO:huey.consumer:MainThread:The following commands are available:
++ mlflow.server.jobs.utils._exec_job
+2026/01/31 21:26:29 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.schemas
+2026/01/31 21:26:29 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.tables
+2026/01/31 21:26:29 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.types
+2026/01/31 21:26:29 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.constraints
+2026/01/31 21:26:29 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.defaults
+2026/01/31 21:26:29 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.comments
+[2026-01-31 21:26:29,596] INFO:huey:Worker-3:mlflow.server.jobs.utils.online_scoring_scheduler: d554e4eb-1911-4d80-8c1a-6d05b05a8717 executed in 0.228s
+2026/01/31 21:26:38 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.schemas
+2026/01/31 21:26:38 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.tables
+2026/01/31 21:26:38 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.types
+2026/01/31 21:26:38 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.constraints
+2026/01/31 21:26:38 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.defaults
+2026/01/31 21:26:38 INFO alembic.runtime.plugins: setup plugin alembic.autogenerate.comments
+[2026-01-31 21:27:29,367] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: 7e80dd1b-ef22-49a7-a720-e9e033c95582.
+[2026-01-31 21:27:35,941] INFO:huey:Worker-1:Executing mlflow.server.jobs.utils.online_scoring_scheduler: 7e80dd1b-ef22-49a7-a720-e9e033c95582
+[2026-01-31 21:27:35,946] INFO:huey:Worker-1:mlflow.server.jobs.utils.online_scoring_scheduler: 7e80dd1b-ef22-49a7-a720-e9e033c95582 executed in 0.004s
+INFO:     127.0.0.1:51036 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51043 - "GET / HTTP/1.1" 200 OK
+[2026-01-31 21:28:29,367] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: ebf7d6ae-90b5-4b51-ae22-aec5eaa50e04.
+[2026-01-31 21:28:33,778] INFO:huey:Worker-1:Executing mlflow.server.jobs.utils.online_scoring_scheduler: ebf7d6ae-90b5-4b51-ae22-aec5eaa50e04
+[2026-01-31 21:28:33,782] INFO:huey:Worker-1:mlflow.server.jobs.utils.online_scoring_scheduler: ebf7d6ae-90b5-4b51-ae22-aec5eaa50e04 executed in 0.004s
+[2026-01-31 21:29:29,365] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: 914126e7-0cd5-43c5-b6ed-17a519ea52db.
