@@ -147,3 +147,6 @@ INFO:     127.0.0.1:51043 - "GET / HTTP/1.1" 200 OK
 [2026-01-31 21:45:29,369] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: 695da3d4-5ab5-4629-bc36-8a7957a85c0e.
 [2026-01-31 21:45:31,929] INFO:huey:Worker-1:Executing mlflow.server.jobs.utils.online_scoring_scheduler: 695da3d4-5ab5-4629-bc36-8a7957a85c0e
 [2026-01-31 21:45:31,934] INFO:huey:Worker-1:mlflow.server.jobs.utils.online_scoring_scheduler: 695da3d4-5ab5-4629-bc36-8a7957a85c0e executed in 0.005s
+[2026-01-31 21:46:29,373] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: 438d7e18-ac92-4430-81a8-94530d1616f5.
+[2026-01-31 21:46:29,759] INFO:huey:Worker-1:Executing mlflow.server.jobs.utils.online_scoring_scheduler: 438d7e18-ac92-4430-81a8-94530d1616f5
+[2026-01-31 21:46:29,764] INFO:huey:Worker-1:mlflow.server.jobs.utils.online_scoring_scheduler: 438d7e18-ac92-4430-81a8-94530d1616f5 executed in 0.004s
