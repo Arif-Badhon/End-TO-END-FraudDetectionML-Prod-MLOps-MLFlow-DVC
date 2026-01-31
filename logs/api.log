@@ -71,3 +71,8 @@ INFO:     127.0.0.1:51035 - "GET /health HTTP/1.1" 200 OK
 2026-01-31 21:28:17,207 INFO sqlalchemy.engine.Engine [cached since 105.6s ago] {}
 INFO:     127.0.0.1:51042 - "GET /health HTTP/1.1" 200 OK
 2026-01-31 21:28:17,209 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84644]
+INFO:     Stopping reloader process [84642]
