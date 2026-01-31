@@ -1,5 +1,10 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
+from pathlib import Path
+
+# Get project root (two levels up from this file)
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+ENV_FILE = PROJECT_ROOT / ".env"
 
 
 class Settings(BaseSettings):
@@ -55,10 +60,10 @@ class Settings(BaseSettings):
     FEAST_REPO_PATH: str
     
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=str(ENV_FILE),  # Absolute path to .env
         env_file_encoding="utf-8",
         case_sensitive=True,
-        extra="ignore"  # Ignore extra fields from .env
+        extra="ignore"
     )
 
 
