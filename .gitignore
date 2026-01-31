@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+*.egg-info/
+
+# Data files (NOT .dvc metadata!)
+/data/raw/*.csv
+/data/raw/*.parquet
+/data/raw/*.json
+/data/raw/*.xlsx
+/data/raw/*.txt
+/data/raw/*.pkl
+/data/raw/*.h5
+/data/processed/*.csv
+/data/processed/*.parquet
+/data/processed/*.pkl
+
+# Models (NOT .dvc metadata!)
+/models/*.pkl
+/models/*.joblib
+/models/*.h5
+/models/*.pth
+/models/*.onnx
+
+# Keep placeholder files
+!/data/.gitkeep
+!/models/.gitkeep
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# DVC
+/dvc.lock
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# DVC local config (contains credentials)
+.dvc/config.local

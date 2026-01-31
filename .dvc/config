@@ -1,0 +1,7 @@
+[core]
+    remote = local-storage
+    autostage = true
+[cache]
+    type = hardlink
+['remote "local-storage"']
+    url = /Users/arif/dvc-storage
