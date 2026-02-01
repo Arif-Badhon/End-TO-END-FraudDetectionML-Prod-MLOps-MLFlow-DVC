@@ -18,6 +18,7 @@ venv/
 /data/processed/*.csv
 /data/processed/*.parquet
 /data/processed/*.pkl
+Fraud Data Collection/
 
 # Models (NOT .dvc metadata!)
 /models/*.pkl
