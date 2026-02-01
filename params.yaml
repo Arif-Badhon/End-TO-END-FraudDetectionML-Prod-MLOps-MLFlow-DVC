@@ -8,67 +8,57 @@
 data:
   raw:
     aaer: data/raw/aaer_mark5.csv
-    labels: data/raw/firm_years_labels.json
-    features: data/raw/firm_years.json
+    firm_years_labels: data/raw/firm_years_labels.json  # 10,764 filings (labeled)
+    firm_years_full: data/raw/firm_years.json           # 84,203 filings (unlabeled)
   
   interim:
     schema_validation: data/interim/schema_validation_passed.txt
-    merged: data/interim/merged_data.parquet
+    aaer_ciks: data/interim/aaer_cik_set.json
+    firm_years_with_labels: data/interim/firm_years_labeled.parquet
   
   processed:
     validated: data/processed/fraud_data_validated.parquet
     text_preprocessed: data/processed/mda_preprocessed.parquet
     text_features: data/processed/text_features.parquet
 
+
 # =============================================================================
 # SCHEMA VALIDATION
 # =============================================================================
 schema_validation:
-  # Expected columns in aaer_mark5.csv
+  # AAER CSV columns (semicolon-delimited)
   aaer_columns:
-    - aaer_num
-    - company_name
+    - id
+    - dateTime
+    - aaerNo
+    - releaseNo
+    - respondents
+    - respondentsText
+    - urls
+    - fraud_start
+    - fraud_end
     - cik
-    - fraud_start_date
-    - fraud_end_date
+    - revoked
+    - certainty_start
+    - certainty_end
   
-  # Expected top-level keys in firm_years.json
+  # Firm years JSON structure (list format)
   firm_years_required_keys:
-    - year
     - cik
-    - mda_text
-    - financial_ratios
+    - name
+    - city
+    - state
+    - sic
+    - filing_type
+    - fye
+    - filing_date
+    - reporting_date
+    - url
+    - mda
   
-  # Expected financial ratio features (28 total)
-  financial_ratio_features:
-    - current_ratio
-    - quick_ratio
-    - cash_ratio
-    - debt_to_equity
-    - debt_ratio
-    - interest_coverage
-    - total_asset_turnover
-    - inventory_turnover
-    - receivables_turnover
-    - days_sales_outstanding
-    - gross_profit_margin
-    - operating_profit_margin
-    - net_profit_margin
-    - return_on_assets
-    - return_on_equity
-    - price_to_earnings
-    - price_to_book
-    - earnings_per_share
-    - book_value_per_share
-    - dividend_yield
-    - payout_ratio
-    - retention_ratio
-    - working_capital_ratio
-    - cash_flow_to_debt
-    - operating_cash_flow_ratio
-    - free_cash_flow
-    - cash_conversion_cycle
-    - asset_turnover
+  # CSV parsing
+  csv_delimiter: ';'  # IMPORTANT: Semicolon, not comma!
+
 
 # =============================================================================
 # DATA VALIDATION (Great Expectations)
