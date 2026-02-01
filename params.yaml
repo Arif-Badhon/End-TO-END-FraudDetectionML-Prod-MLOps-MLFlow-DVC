@@ -1,0 +1,219 @@
+# params.yaml - Pipeline Configuration Parameters
+# This file contains all configurable parameters for Phase 1 pipeline
+# Following 12-factor app principles: Configuration separated from code
+
+# =============================================================================
+# DATA PATHS
+# =============================================================================
+data:
+  raw:
+    aaer: data/raw/aaer_mark5.csv
+    labels: data/raw/firm_years_labels.json
+    features: data/raw/firm_years.json
+  
+  interim:
+    schema_validation: data/interim/schema_validation_passed.txt
+    merged: data/interim/merged_data.parquet
+  
+  processed:
+    validated: data/processed/fraud_data_validated.parquet
+    text_preprocessed: data/processed/mda_preprocessed.parquet
+    text_features: data/processed/text_features.parquet
+
+# =============================================================================
+# SCHEMA VALIDATION
+# =============================================================================
+schema_validation:
+  # Expected columns in aaer_mark5.csv
+  aaer_columns:
+    - aaer_num
+    - company_name
+    - cik
+    - fraud_start_date
+    - fraud_end_date
+  
+  # Expected top-level keys in firm_years.json
+  firm_years_required_keys:
+    - year
+    - cik
+    - mda_text
+    - financial_ratios
+  
+  # Expected financial ratio features (28 total)
+  financial_ratio_features:
+    - current_ratio
+    - quick_ratio
+    - cash_ratio
+    - debt_to_equity
+    - debt_ratio
+    - interest_coverage
+    - total_asset_turnover
+    - inventory_turnover
+    - receivables_turnover
+    - days_sales_outstanding
+    - gross_profit_margin
+    - operating_profit_margin
+    - net_profit_margin
+    - return_on_assets
+    - return_on_equity
+    - price_to_earnings
+    - price_to_book
+    - earnings_per_share
+    - book_value_per_share
+    - dividend_yield
+    - payout_ratio
+    - retention_ratio
+    - working_capital_ratio
+    - cash_flow_to_debt
+    - operating_cash_flow_ratio
+    - free_cash_flow
+    - cash_conversion_cycle
+    - asset_turnover
+
+# =============================================================================
+# DATA VALIDATION (Great Expectations)
+# =============================================================================
+validation:
+  # Class imbalance expectations
+  fraud_rate:
+    min: 0.01  # At least 1% fraud
+    max: 0.05  # At most 5% fraud
+  
+  # Year range
+  year:
+    min: 1994
+    max: 2013
+  
+  # Financial ratio bounds (reasonable business ranges)
+  financial_ratios:
+    current_ratio:
+      min: 0
+      max: 100
+      missing_threshold: 0.95  # 95% non-null required
+    
+    debt_to_equity:
+      min: 0
+      max: 50
+      missing_threshold: 0.95
+    
+    return_on_assets:
+      min: -1.0
+      max: 1.0
+      missing_threshold: 0.90
+    
+    net_profit_margin:
+      min: -1.0
+      max: 1.0
+      missing_threshold: 0.90
+  
+  # Text field validation
+  mda_text:
+    min_length: 100        # Minimum 100 characters
+    max_length: 100000     # Maximum 100k characters
+    missing_threshold: 0.98  # 98% must have MDA text
+
+# =============================================================================
+# TEXT PREPROCESSING
+# =============================================================================
+text_preprocessing:
+  # Cleaning options
+  remove_html: true
+  remove_urls: true
+  remove_emails: true
+  normalize_whitespace: true
+  lowercase: true
+  
+  # Tokenization
+  spacy_model: en_core_web_sm
+  
+  # Stop words
+  remove_stopwords: true
+  custom_financial_stopwords:
+    - company
+    - fiscal
+    - year
+    - period
+    - operations
+    - business
+    # Add more domain-specific stopwords as needed
+  
+  # Feature extraction
+  extract_features:
+    - text_length
+    - word_count
+    - sentence_count
+    - avg_word_length
+    - avg_sentence_length
+    - lexical_diversity
+    - readability_flesch_kincaid
+    - readability_flesch_reading_ease
+    - financial_term_density
+    - sentiment_polarity
+    - sentiment_subjectivity
+  
+  # Financial terms lexicon (for density calculation)
+  financial_terms:
+    - revenue
+    - profit
+    - loss
+    - earnings
+    - assets
+    - liabilities
+    - equity
+    - cash
+    - debt
+    - margin
+    - growth
+    - investment
+    - risk
+    - performance
+    - operations
+    - expenses
+    - income
+    - balance
+    - statement
+    - financial
+
+# =============================================================================
+# REPORTING
+# =============================================================================
+reporting:
+  output_dir: reports
+  
+  # Great Expectations
+  ge_data_docs_dir: great_expectations/uncommitted/data_docs
+  
+  # ydata-profiling
+  profiling_report:
+    title: "Financial Fraud Dataset - Exploratory Data Analysis"
+    minimal: false
+    explorative: true
+    dark_mode: false
+  
+  # Export formats
+  export_formats:
+    - html
+    - json
+    - pdf  # Requires additional setup
+
+# =============================================================================
+# DATABASE (PostgreSQL)
+# =============================================================================
+database:
+  schema: raw_data
+  table: fraud_transactions
+  
+  # Metadata columns to add during ingestion
+  metadata_columns:
+    - ingestion_timestamp
+    - data_version
+    - source_file
+    - validation_passed
+
+# =============================================================================
+# LOGGING
+# =============================================================================
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: logs/phase1_pipeline.log
