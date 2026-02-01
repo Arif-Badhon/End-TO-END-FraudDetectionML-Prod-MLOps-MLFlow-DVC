@@ -186,3 +186,40 @@ INFO:     127.0.0.1:51043 - "GET / HTTP/1.1" 200 OK
 [2026-01-31 21:58:29,375] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: 5d192e50-a167-4618-a385-3da647b96a4b.
 [2026-01-31 21:58:30,067] INFO:huey:Worker-4:Executing mlflow.server.jobs.utils.online_scoring_scheduler: 5d192e50-a167-4618-a385-3da647b96a4b
 [2026-01-31 21:58:30,071] INFO:huey:Worker-4:mlflow.server.jobs.utils.online_scoring_scheduler: 5d192e50-a167-4618-a385-3da647b96a4b executed in 0.004s
+[2026-01-31 21:59:29,376] INFO:huey.consumer.Scheduler:Scheduler:Enqueueing periodic task mlflow.server.jobs.utils.online_scoring_scheduler: e3c50550-4b5c-41f4-b735-e41bd66249eb.
+[2026-01-31 21:59:36,614] INFO:huey:Worker-5:Executing mlflow.server.jobs.utils.online_scoring_scheduler: e3c50550-4b5c-41f4-b735-e41bd66249eb
+[2026-01-31 21:59:36,619] INFO:huey:Worker-5:mlflow.server.jobs.utils.online_scoring_scheduler: e3c50550-4b5c-41f4-b735-e41bd66249eb executed in 0.005s
+[2026-01-31 22:00:18,977] INFO:huey.consumer:MainThread:Received SIGTERM
+[2026-01-31 22:00:18,978] INFO:huey.consumer:MainThread:Received SIGTERM
+[2026-01-31 22:00:18,978] INFO:huey.consumer:MainThread:Received SIGTERM
+[2026-01-31 22:00:18,978] INFO:huey.consumer:MainThread:Received SIGTERM
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+[2026-01-31 22:00:19,037] INFO:huey.consumer:MainThread:Shutting down
+[2026-01-31 22:00:19,038] INFO:huey.consumer:MainThread:Consumer exiting.
+[2026-01-31 22:00:19,043] INFO:huey.consumer:MainThread:Shutting down
+[2026-01-31 22:00:19,044] INFO:huey.consumer:MainThread:Consumer exiting.
+[2026-01-31 22:00:19,045] INFO:huey.consumer:MainThread:Shutting down
+INFO:     Shutting down
+[2026-01-31 22:00:19,046] INFO:huey.consumer:MainThread:Consumer exiting.
+[2026-01-31 22:00:19,047] INFO:huey.consumer:MainThread:Shutting down
+[2026-01-31 22:00:19,048] INFO:huey.consumer:MainThread:Consumer exiting.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Waiting for application shutdown.
+INFO:     Finished server process [84602]
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84604]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84601]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84603]
+INFO:     Received SIGTERM, exiting.
+INFO:     Waiting for child process [84601]
+INFO:     Waiting for child process [84602]
+INFO:     Waiting for child process [84603]
+INFO:     Waiting for child process [84604]
+INFO:     Stopping parent process [84598]
