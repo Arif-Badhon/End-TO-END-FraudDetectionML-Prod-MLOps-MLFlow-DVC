@@ -62,3 +62,11 @@ htmlcov/
 
 # DVC local config (contains credentials)
 .dvc/config.local
+
+# Logs
+logs/
+
+# PID files
+*.pid
+
+
