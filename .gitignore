@@ -64,7 +64,8 @@ htmlcov/
 .dvc/config.local
 
 # Logs
-logs/
+logs/*
+!logs/.gitkeep
 
 # PID files
 *.pid
