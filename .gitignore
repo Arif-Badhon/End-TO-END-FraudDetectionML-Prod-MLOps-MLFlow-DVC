@@ -19,6 +19,10 @@ venv/
 /data/processed/*.parquet
 /data/processed/*.pkl
 Fraud Data Collection/
+data/interim/*
+!data/interim/
+!data/interim/.gitignore
+!data/interim/**/*.dvc
 
 # Models (NOT .dvc metadata!)
 /models/*.pkl
@@ -70,5 +74,3 @@ logs/*
 # PID files
 *.pid
 
-
-data/interim/
