@@ -145,11 +145,13 @@ fraud-detection-ml/
 ## 🔄 The 8-Phase Journey
 
 ### Phase 0: Foundation ✅ COMPLETE
+
 **Status**: ✅ Complete | **Time**: 8-12 hours
 
 Build production infrastructure with FastAPI, PostgreSQL, MLflow, and DVC.
 
 **What's working:**
+
 - PostgreSQL database with schemas
 - FastAPI backend with endpoints
 - MLflow experiment tracking
@@ -165,11 +167,13 @@ Build production infrastructure with FastAPI, PostgreSQL, MLflow, and DVC.
 ---
 
 ### Phase 1: Data & EDA ⏳ NEXT
+
 **Status**: Starting Soon | **Time**: 12-16 hours
 
 Download dataset and explore patterns.
 
 **You'll learn:**
+
 - Pandas data manipulation
 - Statistical analysis
 - Data visualization
@@ -177,6 +181,7 @@ Download dataset and explore patterns.
 - Dataset versioning with DVC
 
 **You'll build:**
+
 - EDA Jupyter notebook
 - Data ingestion pipeline
 - Quality validation tests
@@ -187,6 +192,7 @@ Download dataset and explore patterns.
 ---
 
 ### Phase 2: Features 📋 Planned
+
 **Status**: Planned | **Time**: 16-20 hours
 
 Engineer features for modeling.
@@ -199,6 +205,7 @@ Engineer features for modeling.
 ---
 
 ### Phase 3: Model Development 📋 Planned
+
 **Status**: Planned | **Time**: 16-20 hours
 
 Train and optimize models.
@@ -211,6 +218,7 @@ Train and optimize models.
 ---
 
 ### Phase 4: API & Serving 📋 Planned
+
 **Status**: Planned | **Time**: 12-16 hours
 
 Production prediction API.
@@ -223,6 +231,7 @@ Production prediction API.
 ---
 
 ### Phase 5: Frontend Dashboard 📋 Planned
+
 **Status**: Planned | **Time**: 10-14 hours
 
 Interactive user interface.
@@ -235,6 +244,7 @@ Interactive user interface.
 ---
 
 ### Phase 6: Monitoring & Deployment 📋 Planned
+
 **Status**: Planned | **Time**: 16-20 hours
 
 Deploy to production.
@@ -248,6 +258,7 @@ Deploy to production.
 ---
 
 ### Phase 7: Documentation 📋 Planned
+
 **Status**: Planned | **Time**: 8-10 hours
 
 Polish and document everything.
@@ -260,6 +271,7 @@ Polish and document everything.
 ---
 
 ### Phase 8: Advanced Topics 📋 Optional
+
 **Status**: Optional | **Time**: Varies
 
 Advanced production patterns.
@@ -315,26 +327,31 @@ Advanced production patterns.
 ## 📦 Tech Stack Explained
 
 ### Backend
+
 - **FastAPI** - Modern, fast async web framework
 - **Pydantic** - Type validation and settings
 - **SQLAlchemy** - Database ORM
 
 ### Database
+
 - **PostgreSQL** - Production relational database
 - **Schemas** - Organized data structure
 - **PgAdmin** - Web UI for management
 
 ### MLOps
+
 - **MLflow** - Experiment tracking and model registry
 - **DVC** - Data and model versioning
 - **ZenML** - ML pipeline orchestration (Phase 2+)
 
 ### Infrastructure
+
 - **Docker** - Containerization
 - **Docker Compose** - Multi-container orchestration
 - **Bash Scripts** - Service management
 
 ### Deployment (Future)
+
 - **Kubernetes** - Container orchestration
 - **GitHub Actions** - CI/CD pipeline
 - **Hugging Face** - Model hosting
@@ -345,11 +362,11 @@ Advanced production patterns.
 
 | Service | Port | URL | Purpose |
 |---------|------|-----|---------|
-| **FastAPI** | 8000 | http://127.0.0.1:8000 | REST API |
-| **Swagger UI** | 8000 | http://127.0.0.1:8000/docs | API Documentation |
-| **MLflow** | 5001 | http://127.0.0.1:5001 | Experiment Tracking |
+| **FastAPI** | 8000 | <http://127.0.0.1:8000> | REST API |
+| **Swagger UI** | 8000 | <http://127.0.0.1:8000/docs> | API Documentation |
+| **MLflow** | 5001 | <http://127.0.0.1:5001> | Experiment Tracking |
 | **PostgreSQL** | 5433 | 127.0.0.1:5433 | Database |
-| **PgAdmin** | 5050 | http://127.0.0.1:5050 | Database Manager |
+| **PgAdmin** | 5050 | <http://127.0.0.1:5050> | Database Manager |
 
 ### Database Credentials
 
@@ -366,6 +383,7 @@ Database: fraud_detection
 ## 🎓 Learning Resources Included
 
 ### Documentation
+
 - **Phase 0 Complete Learning Guide** (1,245 lines)
   - Deep dive into each technology
   - Architecture explanations
@@ -377,6 +395,7 @@ Database: fraud_detection
   - Troubleshooting guide
 
 ### External Resources
+
 - [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/) (Official)
 - [Docker Curriculum](https://docker-curriculum.com/) (Free)
 - [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) (Free)
@@ -388,46 +407,54 @@ Database: fraud_detection
 ## 📚 What You'll Learn
 
 ### Week 1-2: Foundation
+
 - ✅ Docker containerization
 - ✅ API development (FastAPI)
 - ✅ Database design (PostgreSQL)
 - ✅ Configuration management
 
 ### Week 3-4: Data
+
 - 📊 Data exploration (Pandas)
 - 📊 Statistical analysis
 - 📊 Data validation
 - 📊 Dataset versioning
 
 ### Week 5-6: Features
+
 - 🛠️ Feature engineering
 - 🛠️ Feature stores
 - 🛠️ Feature monitoring
 
 ### Week 7-8: Models
+
 - 🤖 Model training
 - 🤖 Experiment tracking
 - 🤖 Model evaluation
 - 🤖 Hyperparameter optimization
 
 ### Week 9-10: API
+
 - 🔌 Prediction endpoints
 - 🔌 Request validation
 - 🔌 API testing
 - 🔌 Performance optimization
 
 ### Week 11-12: Frontend
+
 - 📱 Dashboard creation
 - 📱 Real-time metrics
 - 📱 Interactive visualizations
 
 ### Week 13-14: Deployment
+
 - 🚀 Production deployment
 - 🚀 CI/CD pipelines
 - 🚀 Monitoring and alerting
 - 🚀 Incident response
 
 ### Week 15: Polish
+
 - 📖 Documentation
 - 📖 Architecture diagrams
 - 📖 Deployment guides
@@ -437,6 +464,7 @@ Database: fraud_detection
 ## 🚀 Getting Started
 
 ### Day 1: Setup ✅
+
 ```bash
 ./start.sh              # Start services
 ./health_check.sh       # Verify everything
@@ -444,18 +472,21 @@ curl http://127.0.0.1:8000/health  # Test API
 ```
 
 ### Day 2-3: Explore
+
 - Read Phase 0 Learning Guide (2-3 hours)
 - Understand the architecture
 - Review best practices
 - Examine the code
 
 ### Day 4-5: Experiment
+
 - Add a new FastAPI endpoint
 - Create a database table
 - Log to MLflow
 - Write a test
 
 ### Week 2+: Phase 1
+
 - Download fraud dataset
 - Create EDA notebook
 - Build data pipeline
@@ -580,6 +611,7 @@ MIT License - feel free to use this for learning, projects, and portfolios.
 ## 🆘 Troubleshooting
 
 ### Services won't start?
+
 ```bash
 ./stop.sh               # Cleanup
 docker ps              # Check containers
@@ -588,6 +620,7 @@ docker logs <container> # View logs
 ```
 
 ### Database connection failed?
+
 ```bash
 # Check PostgreSQL is running
 docker ps | grep postgres
@@ -597,6 +630,7 @@ psql -h 127.0.0.1 -p 5433 -U frauduser -d fraud_detection
 ```
 
 ### Need help?
+
 - Read the full README (1,500+ lines)
 - Check Troubleshooting section
 - See learning resources above
@@ -611,7 +645,7 @@ psql -h 127.0.0.1 -p 5433 -U frauduser -d fraud_detection
 
 ---
 
-## 🎉 You're All Set!
+## 🎉 You're All Set
 
 Everything is ready for Phase 1. Here's your next steps:
 
