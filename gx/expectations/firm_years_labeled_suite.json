@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "id": "8fe8d95a-995f-4bc0-9baa-ac31597831f0",
+      "kwargs": {
+        "column": "cik"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d47837fa-d997-4904-8eaf-c80ee894109a",
+      "kwargs": {
+        "column": "cik",
+        "max_value": 9999999.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "8f01a7e4-3045-4b65-98a0-b151b07ebd29",
+      "kwargs": {
+        "column": "is_fraud"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "fc6cc980-f6cc-4b69-937c-03e01cecf9ea",
+      "kwargs": {
+        "column": "is_fraud",
+        "value_set": [
+          0,
+          1
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "5f8e7f20-ecf6-449f-9572-a679494f1bda",
+      "kwargs": {
+        "column": "url",
+        "mostly": 0.99,
+        "regex": "^https?://"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "5d0a1529-871d-4e7b-aa04-9d705f2acc1a",
+      "kwargs": {
+        "column": "mda",
+        "mostly": 0.7
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "527b89b6-1e1f-45c9-b3d9-a4af55feccc3",
+      "kwargs": {
+        "column": "mda",
+        "max_value": 1000000,
+        "min_value": 100,
+        "mostly": 0.7
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_value_lengths_to_be_between"
+    }
+  ],
+  "id": "fa74f06a-4d24-4315-b18b-e9e2bb59b89d",
+  "meta": {
+    "great_expectations_version": "1.6.4"
+  },
+  "name": "firm_years_labeled_suite",
+  "notes": null
+}
