@@ -1,0 +1,19 @@
+stages:
+  merge_data:
+    cmd: uv run python scripts/merge_data.py
+    deps:
+      - scripts/merge_data.py
+      - params.yaml
+      - data/raw/aaer_mark5.csv
+      - data/raw/firm_years_labels.json
+    outs:
+      - data/interim/firm_years_labeled.parquet
+
+  validate_data:
+    cmd: uv run python scripts/validate_data_ge.py
+    deps:
+      - scripts/validate_data_ge.py
+      - params.yaml
+      - data/interim/firm_years_labeled.parquet
+    outs:
+      - reports/gx_validation_report.json
