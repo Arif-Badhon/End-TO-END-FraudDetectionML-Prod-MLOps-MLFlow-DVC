@@ -1,0 +1,48 @@
+schema: '2.0'
+stages:
+  merge_data:
+    cmd: uv run python scripts/merge_data.py
+    deps:
+    - path: data/raw/aaer_mark5.csv
+      hash: md5
+      md5: bc525d3dbe1a837fd2776e953d1f18de
+      size: 178477
+      isexec: true
+    - path: data/raw/firm_years_labels.json
+      hash: md5
+      md5: ebb7dd91abc5c6071cd9c544b7e4b8ee
+      size: 715865218
+      isexec: true
+    - path: params.yaml
+      hash: md5
+      md5: 3b079131262fa2d05785cab21627795c
+      size: 5275
+    - path: scripts/merge_data.py
+      hash: md5
+      md5: c67ff1cda97b52d739ebb3af6414f711
+      size: 10330
+    outs:
+    - path: data/interim/firm_years_labeled.parquet
+      hash: md5
+      md5: abe2635c7ceedf042ee641f818bbba5a
+      size: 281959354
+  validate_data:
+    cmd: uv run python scripts/validate_data_ge.py
+    deps:
+    - path: data/interim/firm_years_labeled.parquet
+      hash: md5
+      md5: abe2635c7ceedf042ee641f818bbba5a
+      size: 281959354
+    - path: params.yaml
+      hash: md5
+      md5: 3b079131262fa2d05785cab21627795c
+      size: 5275
+    - path: scripts/validate_data_ge.py
+      hash: md5
+      md5: b2f3f8bff11b4ab3aa358bd476172894
+      size: 4235
+    outs:
+    - path: reports/gx_validation_report.json
+      hash: md5
+      md5: a4d77ba67fad0d2805d2d01796a2f929
+      size: 2540962

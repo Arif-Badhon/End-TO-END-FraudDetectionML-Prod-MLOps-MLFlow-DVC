@@ -1,7 +1,7 @@
 {
   "expectations": [
     {
-      "id": "8fe8d95a-995f-4bc0-9baa-ac31597831f0",
+      "id": "95113e8c-4c37-4baa-b2c6-2fcafd3c7ec8",
       "kwargs": {
         "column": "cik"
       },
@@ -10,7 +10,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "d47837fa-d997-4904-8eaf-c80ee894109a",
+      "id": "e461557d-61e4-4235-95d3-ef3b50832860",
       "kwargs": {
         "column": "cik",
         "max_value": 9999999.0,
@@ -21,7 +21,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "8f01a7e4-3045-4b65-98a0-b151b07ebd29",
+      "id": "5700d7a0-adab-4f9a-9b24-b0ffea986e3f",
       "kwargs": {
         "column": "is_fraud"
       },
@@ -30,7 +30,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "fc6cc980-f6cc-4b69-937c-03e01cecf9ea",
+      "id": "e68d7e55-248d-4e87-bf06-c8566033d095",
       "kwargs": {
         "column": "is_fraud",
         "value_set": [
@@ -43,7 +43,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "5f8e7f20-ecf6-449f-9572-a679494f1bda",
+      "id": "cb98b692-f1b9-4186-abd0-ffa1e7f94e28",
       "kwargs": {
         "column": "url",
         "mostly": 0.99,
@@ -54,7 +54,7 @@
       "type": "expect_column_values_to_match_regex"
     },
     {
-      "id": "5d0a1529-871d-4e7b-aa04-9d705f2acc1a",
+      "id": "70eb685c-e2bf-491c-90d3-33d2deffa01a",
       "kwargs": {
         "column": "mda",
         "mostly": 0.7
@@ -64,7 +64,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "527b89b6-1e1f-45c9-b3d9-a4af55feccc3",
+      "id": "46d8a493-273f-42c2-ae2f-6eb1af8a56c7",
       "kwargs": {
         "column": "mda",
         "max_value": 1000000,

@@ -46,7 +46,7 @@ mlruns/
 mlartifacts/
 
 # DVC
-/dvc.lock
+!dvc.lock
 
 # Environment
 .env
