@@ -46,3 +46,23 @@ stages:
       hash: md5
       md5: a4d77ba67fad0d2805d2d01796a2f929
       size: 2540962
+  extract_features:
+    cmd: uv run python scripts/extract_features.py
+    deps:
+    - path: data/interim/firm_years_labeled.parquet
+      hash: md5
+      md5: abe2635c7ceedf042ee641f818bbba5a
+      size: 281959354
+    - path: params.yaml
+      hash: md5
+      md5: 3b079131262fa2d05785cab21627795c
+      size: 5275
+    - path: scripts/extract_features.py
+      hash: md5
+      md5: 595f4e3e3e0648852cd4bd17e5cb5548
+      size: 3954
+    outs:
+    - path: data/processed/text_features.parquet
+      hash: md5
+      md5: 5c86f09373cbbd3b7d0ec304bbaadb28
+      size: 282569337

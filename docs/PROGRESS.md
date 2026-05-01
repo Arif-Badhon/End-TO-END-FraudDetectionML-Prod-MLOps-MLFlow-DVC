@@ -31,8 +31,8 @@ This document tracks the completion status of the 8 phases of the **Fraud Detect
 
 ### Phase 2: Features ⏳ IN PROGRESS
 **Status:** In Progress | **Time allocated:** 16-20 hours
-- [ ] Feature pipelines (`scripts/extract_features.py`)
-- [ ] DVC pipeline integration for features
+- [x] Feature pipelines (`scripts/extract_features.py`)
+- [x] DVC pipeline integration for features
 - [ ] Online/offline features
 - [ ] Feature monitoring
 
