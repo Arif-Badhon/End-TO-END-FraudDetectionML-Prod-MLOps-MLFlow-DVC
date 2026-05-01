@@ -29,15 +29,15 @@ This document tracks the completion status of the 8 phases of the **Fraud Detect
 - [x] Quality validation tests (`scripts/validate_data_ge.py`, `validate_schema.py`)
 - [x] Dataset versioning with DVC (`dvc.yaml`)
 
-### Phase 2: Features ⏳ IN PROGRESS
-**Status:** In Progress | **Time allocated:** 16-20 hours
+### Phase 2: Features ✅ COMPLETE
+**Status:** ✅ Complete | **Time allocated:** 16-20 hours
 - [x] Feature pipelines (`scripts/extract_features.py`)
 - [x] DVC pipeline integration for features
-- [ ] Online/offline features
-- [ ] Feature monitoring
+- [x] Online/offline features
+- [x] Feature monitoring
 
-### Phase 3: Model Development 📋 PLANNED
-**Status:** Planned | **Time allocated:** 16-20 hours
+### Phase 3: Model Development ⏳ IN PROGRESS
+**Status:** In Progress | **Time allocated:** 16-20 hours
 - [ ] Train baseline models
 - [ ] Hyperparameter tuning
 - [ ] MLflow experiment tracking

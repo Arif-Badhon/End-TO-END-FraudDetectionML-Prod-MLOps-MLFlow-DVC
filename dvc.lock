@@ -66,3 +66,23 @@ stages:
       hash: md5
       md5: 5c86f09373cbbd3b7d0ec304bbaadb28
       size: 282569337
+  monitor_features:
+    cmd: uv run python scripts/monitor_features.py
+    deps:
+    - path: data/processed/text_features.parquet
+      hash: md5
+      md5: 5c86f09373cbbd3b7d0ec304bbaadb28
+      size: 282569337
+    - path: params.yaml
+      hash: md5
+      md5: 3b079131262fa2d05785cab21627795c
+      size: 5275
+    - path: scripts/monitor_features.py
+      hash: md5
+      md5: 3a7f001b64f5160c7e938ad3bd17ccec
+      size: 1227
+    outs:
+    - path: reports/features_profile.html
+      hash: md5
+      md5: 8bf3d2fb3734ca002ef1d7d51718ef95
+      size: 16274617

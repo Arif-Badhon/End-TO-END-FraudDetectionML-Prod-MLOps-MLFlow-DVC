@@ -26,3 +26,12 @@ stages:
       - data/interim/firm_years_labeled.parquet
     outs:
       - data/processed/text_features.parquet
+
+  monitor_features:
+    cmd: uv run python scripts/monitor_features.py
+    deps:
+      - scripts/monitor_features.py
+      - params.yaml
+      - data/processed/text_features.parquet
+    outs:
+      - reports/features_profile.html
